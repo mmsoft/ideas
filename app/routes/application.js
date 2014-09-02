@@ -6,6 +6,7 @@ default Ember.Route.extend({
 		openModal: function(content, controller) {
 			controller.set('content', content);
 			controller.set('reveal', true);
+
 		}
 	}
 });
