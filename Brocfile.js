@@ -17,7 +17,25 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-app.import('bower_components/foundation/css/normalize.css');
-app.import('bower_components/foundation/css/foundation.css');
+app.import('vendor/foundation/css/normalize.css');
+app.import('vendor/foundation/css/foundation.css');
+app.import('vendor/foundation-icon-fonts/foundation-icons.css');
+app.import('vendor/foundation-icon-fonts/foundation-icons.eot', {
+	destDir: '/fonts'
+});
+app.import('vendor/foundation-icon-fonts/foundation-icons.svg', {
+	destDir: '/fonts'
+});
+app.import('vendor/foundation-icon-fonts/foundation-icons.ttf', {
+	destDir: '/fonts'
+});
+app.import('vendor/foundation-icon-fonts/foundation-icons.woff', {
+	destDir: '/fonts'
+});
+
+
+app.import('vendor/modernizr/modernizr.js')
+app.import('vendor/foundation/js/foundation.js');
+
 
 module.exports = app.toTree();
