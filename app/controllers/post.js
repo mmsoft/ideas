@@ -9,8 +9,6 @@ default Ember.ObjectController.extend({
 			var reveal = this.get('controllers.reveal');
 			reveal.set('content', content);
 			reveal.set('reveal', true);
-			//this.$('.reveal-modal').reveal();
-			return true;
 		}
 	}
 });
