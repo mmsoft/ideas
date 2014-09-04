@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export
 default Ember.ArrayController.extend({
-	itemController: "todo",
 
 	actions: {
 		createTodo: function() {
