@@ -20,6 +20,40 @@ default Ember.ArrayController.extend({
 
 			// Save the new model
 			todo.save();
+		},
+
+		clearCompleted: function() {
+			var completed = this.filterBy('done', true);
+			completed.invoke('deleteRecord');
+			completed.invoke('save');
 		}
-	}
+	},
+
+	allAreDone: function(key, value) {
+
+        if (value === undefined) {
+            return this.get('length') > 0 && this.isEvery('done', true);
+        } else {
+            this.setEach('done', value);
+            this.invoke('save');
+            return value;
+        }
+    }.property('@each.done'),
+
+    hasCompleted: function() {
+        return this.get('completed') > 0;
+    }.property('completed'),
+
+    completed: function() {
+        return this.filterBy('done', true).get('length');
+    }.property('@each.done'),
+
+    remaining: function() {
+        return this.filterBy('done', false).get('length');
+    }.property('@each.done'),
+ 
+    inflection: function() {
+        var remaining = this.get('remaining');
+        return (remaining === 1) ? 'item' : 'items';
+    }.property('remaining')
 });

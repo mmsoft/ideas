@@ -10,7 +10,7 @@ Router.map(function() {
 	});
 	//this.resource('reveal');
 	//this.route('application');
-	this.route('todos', {
+	this.resource('todos', {
 		path: '/'
 	}, function() {
 		this.route('active');
