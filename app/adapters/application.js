@@ -1,4 +1,6 @@
 import DS from 'ember-data';
 
-export default DS.FixtureAdapter.extend({
-});
+export
+default DS.FirebaseAdapter.extend({
+	firebase: new Firebase('https://g-ideas.firebaseio.com/posts')
+}); // DS.FixtureAdapter.extend({});

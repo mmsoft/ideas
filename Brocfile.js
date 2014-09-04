@@ -37,5 +37,8 @@ app.import('vendor/foundation-icon-fonts/foundation-icons.woff', {
 app.import('vendor/modernizr/modernizr.js')
 app.import('vendor/foundation/js/foundation.js');
 
+app.import('vendor/firebase/firebase-debug.js');
+app.import('vendor/emberfire/dist/emberfire.js');
+
 
 module.exports = app.toTree();
