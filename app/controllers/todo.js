@@ -21,6 +21,17 @@ default Ember.ObjectController.extend({
 			var todo = this.get('model');
 			todo.deleteRecord();
 			todo.save();
+		},
+
+		isDone: function(key, value) {
+			var todo = this.get('model');
+
+			if (value === undefined) {
+				return todo.get('done');
+			} else {
+				todo.set('done', value);
+				todo.save();
+			}
 		}
 	}
 });
