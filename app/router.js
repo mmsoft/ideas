@@ -6,12 +6,12 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
 	this.resource('posts', {
-		path: '/posts'
+		path: '/'
 	});
 	//this.resource('reveal');
-	//this.route('application');
+
 	this.resource('todos', {
-		path: '/'
+		path: '/task'
 	}, function() {
 		this.route('active');
 		this.route('complete');

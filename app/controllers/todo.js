@@ -24,9 +24,13 @@ default Ember.ObjectController.extend({
 		}
 	},
 
+	updateDoneState: function() {
+		var todo = this.get('model');
 
+		todo.save();
+	}.observes('done')
 
-	done: function(key, value) {
+	/*done: function(key, value) {
 		var todo = this.get('model');
 
 		if (value === undefined) {
@@ -36,5 +40,5 @@ default Ember.ObjectController.extend({
 			todo.save();
 			return value;
 		}
-	}.property('model.done')
+	}.property('model.done')*/
 });
