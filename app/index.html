@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ideas</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ideas</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{content-for 'head'}}
+  <link rel="stylesheet" href="assets/vendor.css">
+  <link rel="stylesheet" href="assets/ideas.css"></head>
+<body>
+  {{content-for 'body'}}
+  <script src="assets/vendor.js"></script>
+  <script src="assets/ideas.js"></script>
 
-    {{BASE_TAG}}
-
-    <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/ideas.css">
-  </head>
-  <body>
-    <script src="assets/vendor.js"></script>
-    <script src="assets/ideas.js"></script>
-    <script>
-      window.IdeasENV = require('ideas/config/environment')['default'];
-      window.EmberENV = window.IdeasENV.EmberENV;
-      window.Ideas = require('ideas/app')['default'].create(IdeasENV.APP);
-    </script>
-  </body>
+</body>
 </html>
